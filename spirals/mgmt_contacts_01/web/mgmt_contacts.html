@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgmt_contacts</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/table.css">
+  </head>
+ 
+  <body>   
+    <fieldset id="contact-fieldset" class="fieldset">
+      <legend>Contacts</legend>      
+      <table id="contact-table" class="table" summary="Contact Table">
+        <thead>
+          <tr>
+            <th id="thEmail">Email</th>
+            <th id="thLastName">Last Name</th>
+            <th id="thFirstName">First Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Generate data. !-->
+        </tbody>
+      </table>
+    </fieldset>
+    
+    <script type="application/dart" src="mgmt_contacts.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

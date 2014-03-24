@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgmt_contacts</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/button.css">
+  </head>
+ 
+  <body>  
+    <h1>Contact Management</h1>
+    
+    <form name="contact">
+      <fieldset id="contact-fieldset" class="fieldset">
+        <legend>Contact</legend>
+        <table>
+          <tr>
+            <td class="label">Email</td>
+            <td>
+              <input id="txtEmail" type="email" class="field email-field" 
+                     required autofocus maxlength="80"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">Last Name</td>
+            <td>
+              <input id="txtLastName" type="text" class="field name-field" 
+                     required maxlength="40"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">First Name</td>
+            <td>
+              <input id="txtFirstName" type="text" class="field name-field" 
+                     required maxlength="40"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">Telephone</td>
+            <td>
+              <input id="txtTelephone" type="text" class="field phone-field" 
+                     placeholder="999-999-9999" maxlength="12"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">Description</td>
+            <td>
+              <input id="txtDescription" type="text" class="field descr-field" 
+                     maxlength="160"/>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+        <button value="" id="btnSave" class="button">Save</button>
+        <button value="" id="btnCancel" class="button" type="reset">Cancel</button>
+      </fieldset>
+    </form>
+    <br/>
+     
+    <fieldset id="contacts-fieldset" class="fieldset">
+      <legend>Contacts</legend>      
+      <table id="contact-table" class="table" summary="Contact Table">
+        <thead>
+          <tr>
+            <th id="thEmail">Email</th>
+            <th id="thLastName">Last Name</th>
+            <th id="thFirstName">First Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Generate data. !-->
+        </tbody>
+      </table>
+    </fieldset>
+    
+    <script type="application/dart" src="mgmt_contacts.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

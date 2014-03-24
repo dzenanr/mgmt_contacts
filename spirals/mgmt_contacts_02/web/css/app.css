@@ -1,0 +1,71 @@
+
+body {
+  background-color: #f2f8ff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+  padding: 5px;
+}
+
+h1 {
+  color: #333333;
+}
+
+.fieldset {
+  font-size: 12px;
+  border: 1px solid #bbbbbb; 
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#contact-fieldset {
+  width: 375px;
+}
+
+#contacts-fieldset {
+  width: 750px;
+}
+
+.label {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+  width: 140px;
+}
+ 
+.field {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #bbbbbb;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.email-field {
+  width: 300px;
+}
+ 
+.name-field {
+  width: 200px;
+}
+
+.phone-field {
+  width: 100px;
+}
+
+.descr-field {
+  width: 600px;
+}
+
+:required {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bbbbbb;
+}
+
+
+

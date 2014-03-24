@@ -1,0 +1,6 @@
+To do
+
+- add more validations
+  -- html5 type="tel" does not validate a phone number
+- display error messages
+  -- when adding a new contact with an email that already exists

@@ -1,0 +1,25 @@
+
+body {
+  background-color: #f2f8ff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+  padding: 5px;
+}
+
+#contact-fieldset {
+  width: 750px;
+}
+
+.fieldset {
+  font-size: 12px;
+  border: 1px solid #bbbbbb; 
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+

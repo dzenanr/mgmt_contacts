@@ -1,0 +1,56 @@
+
+
+.fieldset {
+  background-color: #f2f8ff;
+  font-size: 16px;
+  border: 1px solid #bbbbbb; 
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#contact-fieldset {
+  width: 375px;
+}
+
+#contacts-fieldset {
+  width: 750px;
+}
+
+.label {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  width: 140px;
+}
+ 
+.field {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #bbbbbb;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.email-field {
+  width: 320px;
+}
+ 
+.name-field {
+  width: 240px;
+}
+
+.phone-field {
+  width: 160px;
+}
+
+.descr-field {
+  width: 654px;
+}
+
+:required {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8da3ae;
+}
