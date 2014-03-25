@@ -31,8 +31,47 @@ class ContactForm {
   }
   
   addEventHandlers() {
+    txtTelephone.onKeyDown.listen(enforcePhoneMask);
     btnSave.onClick.listen(saveContact);
     btnCancel.onClick.listen(cancelAction);
+  }
+  
+  /**
+   * Accept only integers and add dashes automatically
+   */
+  enforcePhoneMask(KeyboardEvent e) {
+    int keyCode = e.keyCode;  
+    if (keyCode == KeyCode.BACKSPACE) {
+      return;
+    } else if (keyCode == KeyCode.TAB || keyCode == KeyCode.ENTER) {
+      clearPhoneIfInvalid();
+    } else if (!numericCodes.keys.contains(keyCode)) {
+      e.preventDefault();
+    } else if (txtTelephone.value.length == 2 || txtTelephone.value.length == 6) {
+      txtTelephone.value = txtTelephone.value + numericCodes[keyCode] + '-';
+      e.preventDefault();
+    } else if (txtTelephone.value.length == 3 || txtTelephone.value.length == 7) {
+      txtTelephone.value = txtTelephone.value + '-' + numericCodes[keyCode];
+      e.preventDefault();
+    }
+  }
+  
+  clearPhoneIfInvalid() => 
+      txtTelephone.value.length != 12 ? txtTelephone.value = '' : null;
+
+  Map<int, String> get numericCodes {
+    Map<int, String> numericCodes = new Map<int,String>();
+    numericCodes[KeyCode.ZERO] = '0';
+    numericCodes[KeyCode.ONE] = '1';
+    numericCodes[KeyCode.TWO] = '2';
+    numericCodes[KeyCode.THREE] = '3';
+    numericCodes[KeyCode.FOUR] = '4';
+    numericCodes[KeyCode.FIVE] = '5';
+    numericCodes[KeyCode.SIX] = '6';
+    numericCodes[KeyCode.SEVEN] = '7';
+    numericCodes[KeyCode.EIGHT] = '8';
+    numericCodes[KeyCode.NINE] = '9';
+    return numericCodes;
   }
   
   setFields(Contact contact) {

@@ -3,6 +3,7 @@ Done
 + create a contact table web component
 + add phone validation in the Contact class
   - in Chrome, html5 type="tel" does not validate a phone number
++ enforce a phone input mask
 + add contact pre add validation for an empty email in the Contacts class  
 
 To do

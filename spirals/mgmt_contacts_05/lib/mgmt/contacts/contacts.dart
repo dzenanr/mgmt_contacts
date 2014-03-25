@@ -14,9 +14,13 @@ class Contact extends ContactGen {
   static const String REGEX_PHONE = "[0-9]{3}-[0-9]{3}-[0-9]{4}";
   
   set telephone(String phone) {
-    var regex = new RegExp(REGEX_PHONE);
-    if (regex.hasMatch(phone)) {
-      super.telephone = phone;
+    if (phone == null || phone.trim() == '') {
+      super.telephone = null;
+    } else {
+      var regex = new RegExp(REGEX_PHONE);
+      if (regex.hasMatch(phone)) {
+        super.telephone = phone;
+      }
     }
   } 
   
