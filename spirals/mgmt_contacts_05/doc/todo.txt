@@ -1,0 +1,12 @@
+Done
+
++ create a contact table web component
++ add phone validation in the Contact class
+  - in Chrome, html5 type="tel" does not validate a phone number
++ add contact pre add validation for an empty email in the Contacts class  
+
+To do
+
+- do not allow a change of email when updating an existing contact
+- display an error message,
+  when adding a new contact with an email that already exists

@@ -1,9 +1,9 @@
-part of mgmt_contacts_app;
+part of contact_table_wc;
 
 class ContactTable {
   Contacts contacts;
   
-  ContactsApp app; 
+  ContactTableWc wc; 
   TableElement contactTable;
   Element thEdit;
   Element thEmail;
@@ -11,8 +11,8 @@ class ContactTable {
   ButtonElement btnRemoveContact;
   ButtonElement btnDoNotRemoveContact;
 
-  ContactTable(this.app) {
-    contacts = app.model.contacts;
+  ContactTable(this.wc) {
+    contacts = wc.model.contacts;
     bindElements();
     addEventHandlers();
     contacts.sort();
@@ -120,7 +120,7 @@ class ContactTable {
         imgInputElement.src = 'img/edit.png';
       }
     }
-    app.currentContact = contact;
+    wc.currentContact = contact;
   }
   
   doNotShowSelectedContact() {
@@ -129,7 +129,7 @@ class ContactTable {
       var imgInputElement = row.nodes[0].nodes[0] as InputElement;
       imgInputElement.src = 'img/edit.png'; 
     }
-    app.currentContact = null;
+    wc.currentContact = null;
   }
   
   toRemoveContact(Event e) {
@@ -137,16 +137,16 @@ class ContactTable {
     btnDoNotRemoveContact.style.display = 'inline';
     String email = (e.target as InputElement).value;
     var contact = contacts.singleWhereAttributeId('email', email);
-    app.currentContact = contact;
+    wc.currentContact = contact;
   }
   
   removeContactAfterConfirmation(Event e) {
     btnRemoveContact.style.display = 'none';
     btnDoNotRemoveContact.style.display = 'none';
-    var removed = contacts.remove(app.currentContact);
+    var removed = contacts.remove(wc.currentContact);
     if (removed) {
-      removeRow(app.currentContact);
-      app.save();
+      removeRow(wc.currentContact);
+      wc.save();
       doNotShowSelectedContact();
     }
   }
@@ -154,7 +154,7 @@ class ContactTable {
   doNotRemoveContact(Event e) {
     btnRemoveContact.style.display = 'none';
     btnDoNotRemoveContact.style.display = 'none';
-    app.currentContact = null;
+    wc.currentContact = null;
     doNotShowSelectedContact();
   }
   
@@ -169,8 +169,8 @@ class ContactTable {
     }   
     removeRows();
     display();
-    if (app.currentContact != null) {
-      showSelectedContact(app.currentContact);
+    if (wc.currentContact != null) {
+      showSelectedContact(wc.currentContact);
     }
   }
 }

@@ -1,6 +1,12 @@
+Done
+
++ confirm a removal
++ sort contacts on email or last name, first name
++ deselect the selected contact
+
 To do
 
-- add more validations
-  -- html5 type="tel" does not validate a phone number
-- display error messages
-  -- when adding a new contact with an email that already exists
+- create a contact table web component
+- add phone validation in the Contact class
+  - in Chrome, html5 type="tel" does not validate a phone number
+- add contact pre add validation for an empty email in the Contacts class  

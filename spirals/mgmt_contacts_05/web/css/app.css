@@ -1,0 +1,27 @@
+
+
+body {
+  background-color: #f8fbfd;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+  padding: 5px;
+}
+
+h1 {
+  color: #333333;
+}
+
+#info {
+  margin: 65px auto 0;
+  color: #a6a6a6;
+  font-size: 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+
