@@ -6,6 +6,9 @@ Done
 + enforce a phone input mask
 + add contact pre add validation for an empty email in the Contacts class  
 
+- cannot save data to local storage within the (specific) model -
+  dartling cannot use dart:html and the window object comes from dart:html
+
 To do
 
 - do not allow a change of email when updating an existing contact

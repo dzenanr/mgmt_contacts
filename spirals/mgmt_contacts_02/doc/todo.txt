@@ -5,5 +5,5 @@ Done
 
 To do
 
-- edit an existing contacts
+- edit an existing contact
 - remove an existing contact

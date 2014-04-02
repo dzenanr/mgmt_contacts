@@ -47,7 +47,7 @@ class ContactForm {
     var added = contacts.add(newContact);
     //assert(added);
     contactTable.app.save();
-    contactTable.display();
+    //contactTable.display();
   }
   
   cancelAction(Event e) {
