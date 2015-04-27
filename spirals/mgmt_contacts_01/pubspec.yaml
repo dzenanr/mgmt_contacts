@@ -4,9 +4,9 @@ author: Dzenan Ridjanovic
 description: mgmt_contacts application that uses dartling for its model.
 homepage: http://ondart.me/
 environment:
-  sdk: '>=1.2.0 <2.0.0'
+  sdk: '>=1.9.3 <2.0.0'
 dependencies:
-  browser: '>=0.10.0 <0.11.0'
+  browser: any
   dartling:
     git: https://github.com/dzenanr/dartling.git
   dartling_default_app:
